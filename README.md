@@ -5,9 +5,9 @@ The files in this repository were used to configure the network depicted below.
 
 ![TODO: Update the path with the name of your diagram](Images/Cloud-Page-2.jpg)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Ansible folder may be used to install only certain pieces of it, such as Filebeat.
 
-  - _TODO: Enter the playbook file._
+  - _myplaybook.yml_
 
 This document contains the following details:
 - Description of the Topology
@@ -69,9 +69,11 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 - _It can be reused to build ELK machines for other stacks._
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+- _install Docker; download image; etc._
+- _install pyton;_
+- _install Docker;_
+- _Download and lauch web container image cyberxsecurity/dvwa and start with ports 80:80;_
+- _Enable Docker Service
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
