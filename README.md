@@ -73,11 +73,11 @@ The playbook implements the following tasks:
 - _install pyton;_
 - _install Docker;_
 - _Download and lauch web container image cyberxsecurity/dvwa and start with ports 80:80;_
-- _Enable Docker Service
+- _Enable Docker Service;_
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+(Images/docker_ps_output.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
