@@ -113,6 +113,9 @@ SSH into the control node and follow the steps below:
 
 - _Which URL do you navigate to in order to check that the ELK server is running? http://ELK-VM-PUBLIC_IP:5601/app/kibana
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
-- 
-
+_Commands_
+- Assuming you are already in the container and in /etc/ansible folder, Get RAW link to the file from Github and download install_elk.yml file
+using the command _ wget -O install-elk.yml <RAW_LINK>_
+- ![TODO: Update the path with the name of your diagram](Images/wget_yml.jpg)
+- Update hosts file : _vi /etc/ansible/hosts_ to update Private IP addresses of ELK server and Web servers
+- To run playboook : _ansible-playbook /etc/ansible/install-elk.yml
