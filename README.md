@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![TODO: Update the path with the name of your diagram](Images/Cloud-Page-2.jpg)
+![TODO: Update the path with the name of your diagram](Images/elk-diagram.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Ansible folder may be used to install only certain pieces of it, such as Filebeat.
 
@@ -38,9 +38,9 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
 | Jump Box | Gateway  | 10.0.0.4   | Linux            |
-| Web-1    |App Server| 10.0.0.13  | Linux            |
+| Web-1    |App Server| 10.0.0.5  | Linux            |
 | Web-2    |App Server| 10.0.0.6   | Linux            |
-| Web-3    |App Server| 10.0.0.14  | Linux            |
+| Web-3    |App Server| 10.0.0.7  | Linux            |
 | ELK-VM   |ELK Server| 10.1.0.4   | Linux            |
 
 ### Access Policies
