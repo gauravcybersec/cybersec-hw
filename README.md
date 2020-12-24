@@ -6,7 +6,10 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Ansible folder may be used to install only certain pieces of it, such as Filebeat.
 
-  - _myplaybook.yml_
+  - To install ELK server, use _install-elk.yml_
+  - To install Filebeat, use _filebeat-playbook.yml_
+  - To install Metricbeat, use _metrixbeat-playbook.yml_
+  
 
 This document contains the following details:
 - Description of the Topology
@@ -48,7 +51,7 @@ Only the Jump Box machine can accept connections from the Internet. Access to th
 - 73.223.89.101 (local machine IP address)
 
 Machines within the network can only be accessed by SSH from Jumpbox.
-- _ELK VM can only be accessed with SSH from Jump Box 10.0.0.4. ELK VM web app can be accessed on port 5601 with http from 73.223.89.101 (local machine IP address)_
+- ELK VM can only be accessed with SSH from Jump Box 10.0.0.4. ELK VM web app can be accessed on port 5601 with http from 73.223.89.101 (local machine IP address)
 
 A summary of the access policies in place can be found in the table below.
 
@@ -86,11 +89,11 @@ This ELK server is configured to monitor the following machines:
 
 We have installed the following Beats on these machines:
 - _Filebeat_
-- _Metrixbeat_
+- _Metricbeat_
 
 These Beats allow us to collect the following information from each machine:
-- _Filebeat collects log files under /var/log/ folder, which we use to track logon events, cronjob logs, authentication and authorization logs etc. Example: /var/log/secure log contains information related to authentication and authorization privileges. For example, sshd logs all the messages here, including unsuccessful login_
-- _Metricbeats periodically collects system-wide and per-process CPU and memory statistics. Example it can be used monitor cpu usage.
+- Filebeat collects log files under /var/log/ folder, which we use to track logon events, cronjob logs, authentication and authorization logs etc. Example: /var/log/secure log contains information related to authentication and authorization privileges. For example, sshd logs all the messages here, including unsuccessful login
+- Metricbeats periodically collects system-wide and per-process CPU and memory statistics. Example it can be used monitor cpu usage.
 ![TODO: Update the path with the name of your diagram](Images/metric_beat.jpg)
 
 ### Using the Playbook
@@ -105,10 +108,15 @@ SSH into the control node and follow the steps below:
 - _Which file do you update to make Ansible run the playbook on a specific machine? hosts How do I specify which machine to install the ELK server on versus which to install Filebeat on? In hosts file, create tags like below for ELK and webservers and then specify these tag names under hosts in playbooks._
 Example:
 - _hosts file_
+
  ![TODO: Update the path with the name of your diagram](Images/hosts.jpg)
+ 
 - _myplaybook.yml_
+
  ![TODO: Update the path with the name of your diagram](Images/myplaybook.jpg)
+ 
 - _filebeat-playbook.yml_
+
  ![TODO: Update the path with the name of your diagram](Images/filebeat.jpg)
 
 - _Which URL do you navigate to in order to check that the ELK server is running? http://ELK-VM-PUBLIC_IP:5601/app/kibana
