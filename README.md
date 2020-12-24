@@ -76,7 +76,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
--![TODO: Update the path with the name of your diagram](Images/docker_ps_output.jpg)
+![TODO: Update the path with the name of your diagram](Images/docker_ps_output.jpg)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -91,7 +91,7 @@ We have installed the following Beats on these machines:
 These Beats allow us to collect the following information from each machine:
 - _Filebeat collects log files under /var/log/ folder, which we use to track logon events, cronjob logs, authentication and authorization logs etc. Example: /var/log/secure log contains information related to authentication and authorization privileges. For example, sshd logs all the messages here, including unsuccessful login_
 - _Metricbeats periodically collects system-wide and per-process CPU and memory statistics. Example it can be used monitor cpu usage.
-- ![TODO: Update the path with the name of your diagram](Images/metric_beat.jpg)
+![TODO: Update the path with the name of your diagram](Images/metric_beat.jpg)
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
@@ -103,13 +103,13 @@ SSH into the control node and follow the steps below:
 
 - _Which file is the playbook? install-elk.yml Where do you copy it? /etc/ansible/_
 - _Which file do you update to make Ansible run the playbook on a specific machine? hosts How do I specify which machine to install the ELK server on versus which to install Filebeat on? In hosts file, create tags like below for ELK and webservers and then specify these tag names under hosts in playbooks._
-- Example:
+Example:
 - _hosts file_
-- ![TODO: Update the path with the name of your diagram](Images/hosts.jpg)
+ ![TODO: Update the path with the name of your diagram](Images/hosts.jpg)
 - _myplaybook.yml_
-- ![TODO: Update the path with the name of your diagram](Images/myplaybook.jpg)
+ ![TODO: Update the path with the name of your diagram](Images/myplaybook.jpg)
 - _filebeat-playbook.yml_
-- ![TODO: Update the path with the name of your diagram](Images/filebeat.jpg)
+ ![TODO: Update the path with the name of your diagram](Images/filebeat.jpg)
 
 - _Which URL do you navigate to in order to check that the ELK server is running? http://ELK-VM-PUBLIC_IP:5601/app/kibana
 
@@ -117,5 +117,5 @@ _Commands_
 - Assuming you are already in the container and in /etc/ansible folder, Get RAW link to the file from Github and download install_elk.yml file
 using the command _wget -O install-elk.yml <RAW_LINK>_
 - ![TODO: Update the path with the name of your diagram](Images/wget_yml.jpg)
-- Update hosts file : _vi /etc/ansible/hosts_ to update Private IP addresses of ELK server and Web servers
-- To run playboook : _ansible-playbook /etc/ansible/install-elk.yml_
+- Update hosts file : $ _vi /etc/ansible/hosts_ to update Private IP addresses of ELK server and Web servers
+- To run playboook : $ _ansible-playbook /etc/ansible/install-elk.yml_
